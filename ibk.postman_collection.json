@@ -1,0 +1,95 @@
+{
+	"info": {
+		"_postman_id": "73e47d03-9d85-423d-a893-f2c9a828bb7c",
+		"name": "ibk",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "9754059"
+	},
+	"item": [
+		{
+			"name": "listar tipos cambio",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:4112/api/tc",
+					"host": [
+						"localhost"
+					],
+					"port": "4112",
+					"path": [
+						"api",
+						"tc"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "cambiar moneda",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"monedaOrigen\":\"PEN\",\r\n    \"monedaDestino\":\"USD\",\r\n    \"monto\":20\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:4112/api/tc/cambiarMoneda",
+					"host": [
+						"localhost"
+					],
+					"port": "4112",
+					"path": [
+						"api",
+						"tc",
+						"cambiarMoneda"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "actualizar tipo de cambio",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"monedaOrigen\": \"USD\",\r\n    \"monedaDestino\": \"PEN\",\r\n    \"tasaCambio\":3.7\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:4112/api/tc",
+					"host": [
+						"localhost"
+					],
+					"port": "4112",
+					"path": [
+						"api",
+						"tc"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
